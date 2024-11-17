@@ -1,0 +1,55 @@
+export const AboutPage = {
+  name: 'about_page',
+  title: 'About Page',
+  type: 'document',
+  fields: [
+    {
+      name: 'headline',
+      title: 'Headline',
+      type: 'string',
+      description: 'Main headline text for the About page.',
+    },
+    {
+      name: 'about_headline',
+      title: 'About Headline',
+      type: 'reference',
+      to: [{type: 'text_headline'}],
+      description: 'About Headline Section',
+    },
+    {
+      name: 'cards_slider',
+      title: 'Cards Slider Section',
+      type: 'reference',
+      to: [{type: 'cards_slider'}],
+      description: 'Reference to the CardsSlider section.',
+    },
+    {
+      name: 'values',
+      title: 'Values Section',
+      type: 'reference',
+      to: [{type: 'values'}],
+      description: 'Reference to the Values section.',
+    },
+    {
+      name: 'team',
+      title: 'Team Section',
+      type: 'reference',
+      to: [{type: 'team'}],
+      description: 'Reference to the Team section.',
+    },
+    {
+      name: 'testimonial',
+      title: 'Testimonial Section',
+      type: 'reference',
+      to: [{type: 'testimonial'}],
+      description: 'Reference to the Testimonial section.',
+    },
+    {
+      name: 'contact_action',
+      title: 'Contact Action Section',
+      type: 'reference',
+      to: [{type: 'contact_action'}],
+      description: 'Reference to the ContactAction section.',
+    },
+  ],
+}

@@ -1,7 +1,11 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
+import {deskTool} from 'sanity/desk'
+import {customDeskStructure} from './deskStructure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {colorInput} from '@sanity/color-input'
+import {markdownSchema} from 'sanity-plugin-markdown'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +14,15 @@ export default defineConfig({
   projectId: 'i7vlnhqq',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool(),
+    visionTool(),
+    colorInput(),
+    markdownSchema(),
+    deskTool({
+      structure: customDeskStructure,
+    }),
+  ],
 
   schema: {
     types: schemaTypes,
